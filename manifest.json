@@ -1,0 +1,24 @@
+{
+    "name": "Kolorit",
+    "version": "0.1.0",
+    "description": "A chrome extension created to learn german name genders easier",
+    "permissions": ["storage", "tabs","activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"]
+      }
+    ],
+
+    
+
+    "action": {
+      "default_title": "Kolorit",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+}
